@@ -1,32 +1,51 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying single real estate posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package real-estate
+ */
 
-<section class="single-real-estate">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 p-4">
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                        <header class="entry-header">
-                            <h1 class="entry-title"><?php the_title(); ?></h1>
-                        </header>
+get_header();
 
-                        <div class="entry-content">
-                            <?php the_content(); ?>
-                        </div>
+// Start the loop
+while ( have_posts() ) :
+    the_post();
 
-                        <footer class="entry-footer">
-                            <?php the_terms( get_the_ID(), 'category', '<div class="entry-terms">Categories: ', ', ', '</div>' ); ?>
-                            <?php the_terms( get_the_ID(), 'post_tag', '<div class="entry-terms">Tags: ', ', ', '</div>' ); ?>
-                        </footer>
-                    </article>
-                <?php endwhile; endif; ?>
+    // Retrieve ACF field values
+    $main_image = get_field('images');
+    $description = get_field('description');
+    $number_of_baths = get_field('spesification')['number_of_baths'];
+    $number_of_bed_rooms = get_field('spesification')['number_of_bed_rooms'];
+    $sqft = get_field('spesification')['sqft'];
+
+    ?>
+
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <header class="entry-header">
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        </header><!-- .entry-header -->
+
+        <div class="entry-content">
+            <?php if ($main_image) : ?>
+                <img src="<?php echo esc_url($main_image['url']); ?>" alt="<?php echo esc_attr($main_image['alt']); ?>">
+            <?php endif; ?>
+
+            <?php the_content(); ?>
+
+            <div class="specifications">
+                <p><strong>Number of Baths:</strong> <?php echo esc_html($number_of_baths); ?></p>
+                <p><strong>Number of Bedrooms:</strong> <?php echo esc_html($number_of_bed_rooms); ?></p>
+                <p><strong>Square Footage:</strong> <?php echo esc_html($sqft); ?></p>
             </div>
+        </div><!-- .entry-content -->
 
-            <div class="col-md-4 p-4">
-                <p>custom side bar</p>
-            </div>
-        </div>
-    </div>
-</section>
+        <footer class="entry-footer">
+            <?php real_estate_entry_footer(); ?>
+        </footer><!-- .entry-footer -->
+    </article><!-- #post-<?php the_ID(); ?> -->
 
-<?php get_footer(); ?>
+<?php endwhile; // End of the loop.
+
+get_footer();
