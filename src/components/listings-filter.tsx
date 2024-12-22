@@ -1,37 +1,60 @@
-import React from 'react';
+"use client";
+
+import { useState } from "react";
 
 interface ListingsFilterProps {
   onFilterChange: (filters: any) => void;
 }
 
 export default function ListingsFilter({ onFilterChange }: ListingsFilterProps) {
+  const [filters, setFilters] = useState({
+    minPrice: "",
+    maxPrice: "",
+    propertyType: "",
+    bedrooms: "",
+    bathrooms: "",
+  });
+
+  const handleInputChange = (key: string, value: string) => {
+    const updatedFilters = { ...filters, [key]: value };
+    setFilters(updatedFilters);
+    onFilterChange(updatedFilters);
+  };
+
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md">
-      <h3 className="text-lg font-semibold mb-4">Filters</h3>
-      <div className="space-y-4">
+    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+      <h3 className="text-xl font-bold text-gray-800 mb-6">Filter Listings</h3>
+      <div className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Price Range</label>
-          <div className="mt-1 grid grid-cols-2 gap-2">
+          <label className="block text-sm font-medium text-gray-600 mb-2">
+            Price Range
+          </label>
+          <div className="flex gap-4">
             <input
               type="number"
               placeholder="Min"
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-              onChange={(e) => onFilterChange({ minPrice: e.target.value })}
+              value={filters.minPrice}
+              className="w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800 p-2"
+              onChange={(e) => handleInputChange("minPrice", e.target.value)}
             />
             <input
               type="number"
               placeholder="Max"
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-              onChange={(e) => onFilterChange({ maxPrice: e.target.value })}
+              value={filters.maxPrice}
+              className="w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800 p-2"
+              onChange={(e) => handleInputChange("maxPrice", e.target.value)}
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">Property Type</label>
+          <label className="block text-sm font-medium text-gray-600 mb-2">
+            Property Type
+          </label>
           <select
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-            onChange={(e) => onFilterChange({ propertyType: e.target.value })}
+            value={filters.propertyType}
+            className="w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800 p-2"
+            onChange={(e) => handleInputChange("propertyType", e.target.value)}
           >
             <option value="">All Types</option>
             <option value="house">House</option>
@@ -41,10 +64,13 @@ export default function ListingsFilter({ onFilterChange }: ListingsFilterProps) 
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">Bedrooms</label>
+          <label className="block text-sm font-medium text-gray-600 mb-2">
+            Bedrooms
+          </label>
           <select
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-            onChange={(e) => onFilterChange({ bedrooms: e.target.value })}
+            value={filters.bedrooms}
+            className="w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800 p-2"
+            onChange={(e) => handleInputChange("bedrooms", e.target.value)}
           >
             <option value="">Any</option>
             <option value="1">1+</option>
@@ -55,10 +81,13 @@ export default function ListingsFilter({ onFilterChange }: ListingsFilterProps) 
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">Bathrooms</label>
+          <label className="block text-sm font-medium text-gray-600 mb-2">
+            Bathrooms
+          </label>
           <select
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-            onChange={(e) => onFilterChange({ bathrooms: e.target.value })}
+            value={filters.bathrooms}
+            className="w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800 p-2"
+            onChange={(e) => handleInputChange("bathrooms", e.target.value)}
           >
             <option value="">Any</option>
             <option value="1">1+</option>
