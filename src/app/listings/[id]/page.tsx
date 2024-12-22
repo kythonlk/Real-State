@@ -1,9 +1,9 @@
-import { getListingById } from '@/actions/useListingDetail'
-import ListingGallery from '@/components/listing-detail/ListingGallery';
-import ListingInfo from '@/components/listing-detail/ListingInfo';
-import ListingAmenities from '@/components/listing-detail/ListingAmenities';
-import ListingContact from '@/components/listing-detail/ListingContact';
-import ListingSimilar from '@/components/listing-detail/ListingSimilar';
+import { getListingById } from '@/actions/listing-details'
+import ListingGallery from '@/components/listing-detail/listing-gallery';
+import ListingInfo from '@/components/listing-detail/listing-info';
+import ListingAmenities from '@/components/listing-detail/listing-amenities';
+import ListingContact from '@/components/listing-detail/listing-contact';
+import ListingSimilar from '@/components/listing-detail/listing-similar';
 import { Metadata } from 'next';
 
 interface Props {
