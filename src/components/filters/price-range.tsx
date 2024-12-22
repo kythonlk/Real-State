@@ -20,7 +20,7 @@ export default function PriceRangeFilter({ onPriceChange }: PriceRangeFilterProp
             className="filter-input pl-8"
             onChange={(e) => onPriceChange(e.target.value, '')}
           />
-          <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500">$</span>
+          <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500">AED</span>
         </div>
         <div className="relative">
           <input
@@ -29,7 +29,7 @@ export default function PriceRangeFilter({ onPriceChange }: PriceRangeFilterProp
             className="filter-input pl-8"
             onChange={(e) => onPriceChange('', e.target.value)}
           />
-          <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500">$</span>
+          <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500">AED</span>
         </div>
       </div>
     </div>

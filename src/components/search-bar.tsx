@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Search, MapPin, Home as HomeIcon } from 'lucide-react';
 import { listings } from '@/data/listings';

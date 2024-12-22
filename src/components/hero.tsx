@@ -1,5 +1,4 @@
-import React from 'react';
-import { Search } from 'lucide-react';
+import SearchBar from './search-bar';
 
 export default function Hero() {
   return (
@@ -12,7 +11,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50" />
       </div>
-      
+
       <div className="relative h-full flex items-center justify-center">
         <div className="text-center text-white px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -21,19 +20,9 @@ export default function Hero() {
           <p className="text-xl mb-8">
             Discover the perfect property in your favorite location
           </p>
-          
-          <div className="max-w-3xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 bg-white p-4 rounded-lg shadow-lg">
-              <input
-                type="text"
-                placeholder="Enter location..."
-                className="flex-1 px-4 py-2 rounded border focus:outline-none focus:border-blue-500"
-              />
-              <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 flex items-center justify-center gap-2">
-                <Search className="h-5 w-5" />
-                <span>Search</span>
-              </button>
-            </div>
+
+          <div className="max-w-4xl mx-auto">
+            <SearchBar />
           </div>
         </div>
       </div>
