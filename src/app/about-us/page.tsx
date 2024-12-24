@@ -1,4 +1,5 @@
 import { Building, Users, Award, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -83,10 +84,12 @@ export default function About() {
                 }
               ].map((member, index) => (
                 <div key={index} className="text-center">
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
                     className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                    width={200}
+                    height={200}
                   />
                   <h3 className="font-semibold text-lg">{member.name}</h3>
                   <p className="text-gray-600">{member.role}</p>
