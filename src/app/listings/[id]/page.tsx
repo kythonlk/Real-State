@@ -4,28 +4,14 @@ import ListingInfo from '@/components/listing-detail/listing-info';
 import ListingAmenities from '@/components/listing-detail/listing-amenities';
 import ListingContact from '@/components/listing-detail/listing-contact';
 import ListingSimilar from '@/components/listing-detail/listing-similar';
-import { Metadata } from 'next';
 
 interface Props {
-  params: {
-    id: string;
-  };
-}
-
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const listing = await getListingById(params.id)
-
-  return {
-    title: listing.title || 'Listing not found',
-    description: listing.description || 'View details of a real estate listing',
-  };
+  params: Promise<{ id: string }>
 }
 
 export default async function ListingDetail({ params }: Props) {
-
-  const listing = await getListingById(params.id);
-
+  const id = (await params).id
+  const listing = await getListingById(id);
 
   if (!listing) return <div>Listing Not Found</div>
 
