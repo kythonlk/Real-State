@@ -17,7 +17,7 @@ export default function About() {
             <p className="text-gray-600">
               Our commitment to excellence, integrity, and customer satisfaction has earned us numerous accolades
               and the trust of our valued clients. We believe that finding the right home is about more than just
-              property - it's about finding the perfect place to create lasting memories.
+              property - it s about finding the perfect place to create lasting memories.
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Client First</h3>
               <p className="text-gray-600">
-                We prioritize our clients' needs and satisfaction above all else, ensuring personalized service.
+                We prioritize our clients needs and satisfaction above all else, ensuring personalized service.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">

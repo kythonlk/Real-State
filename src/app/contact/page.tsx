@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
           <p className="text-gray-600 text-center mb-12">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions? We would love to hear from you. Send us a message and we will respond as soon as possible.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

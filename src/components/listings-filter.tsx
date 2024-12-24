@@ -1,9 +1,10 @@
 "use client";
 
+import { Filter } from "@/types/listing";
 import { useState } from "react";
 
 interface ListingsFilterProps {
-  onFilterChange: (filters: any) => void;
+  onFilterChange: (filters: Partial<Filter>) => void;
 }
 
 export default function ListingsFilter({ onFilterChange }: ListingsFilterProps) {

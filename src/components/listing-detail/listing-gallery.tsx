@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface ListingGalleryProps {
   images: string[];
@@ -12,10 +13,12 @@ export default function ListingGallery({ images }: ListingGalleryProps) {
 
   return (
     <div className="relative rounded-lg overflow-hidden">
-      <img
+      <Image
         src={images[activeIndex]}
         alt="Property"
         className="w-full h-[500px] object-cover"
+        width={200}
+        height={200}
       />
 
       {images.length > 1 && (

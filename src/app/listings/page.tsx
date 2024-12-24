@@ -15,10 +15,10 @@ export default function Listings() {
 
   const filteredListings = listings.filter((listing: Listing) => {
     if (filters.propertyType && listing.propertyType !== filters.propertyType) return false;
-    if (filters.minPrice && listing.price < filters.minPrice) return false;
-    if (filters.maxPrice && listing.price > filters.maxPrice) return false;
-    if (filters.bedrooms && listing.bedrooms < (filters.bedrooms as number)) return false;
-    if (filters.bathrooms && listing.bathrooms < (filters.bathrooms as number)) return false;
+    if (typeof filters.minPrice === 'number' && listing.price < filters.minPrice) return false;
+    if (typeof filters.maxPrice === 'number' && listing.price > filters.maxPrice) return false;
+    if (typeof filters.bedrooms === 'number' && listing.bedrooms < filters.bedrooms) return false;
+    if (typeof filters.bathrooms === 'number' && listing.bathrooms < filters.bathrooms) return false;
     return true;
   });
 

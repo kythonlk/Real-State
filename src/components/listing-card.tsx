@@ -3,6 +3,7 @@
 import React from 'react';
 import { Listing } from '@/types/listing';
 import { BedDouble, Bath, Move } from 'lucide-react';
+import Image from 'next/image';
 
 interface ListingCardProps {
   listing: Listing;
@@ -26,10 +27,12 @@ export default function ListingCard({ listing }: ListingCardProps) {
       onClick={handleClick}
       className="block bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
     >
-      <img
+      <Image
         src={listing.imageUrl}
         alt={listing.title}
         className="w-full h-48 object-cover"
+        width={200}
+        height={200}
       />
       <div className="p-4">
         <div className="flex justify-between items-start">

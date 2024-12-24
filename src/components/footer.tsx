@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -19,9 +20,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-400 hover:text-white">Home</a></li>
-              <li><a href="/listings" className="text-gray-400 hover:text-white">Properties</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-white">Contact</a></li>
+              <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
+              <li><Link href="/listings" className="text-gray-400 hover:text-white">Properties</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
             </ul>
           </div>
 
@@ -38,18 +39,18 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <div className="text-gray-400 hover:text-white">
                 <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              </div>
+              <div className="text-gray-400 hover:text-white">
                 <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              </div>
+              <div className="text-gray-400 hover:text-white">
                 <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              </div>
+              <div className="text-gray-400 hover:text-white">
                 <Linkedin className="h-6 w-6" />
-              </a>
+              </div>
             </div>
           </div>
         </div>

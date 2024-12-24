@@ -1,5 +1,6 @@
 import React from 'react';
 import { Upload } from 'lucide-react';
+import Image from 'next/image';
 
 interface ImageUploadProps {
   images: FileList | null;
@@ -33,10 +34,12 @@ export default function ImageUpload({ images, onImagesChange }: ImageUploadProps
         <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
           {Array.from(images).map((file, index) => (
             <div key={index} className="relative">
-              <img
+              <Image
                 src={URL.createObjectURL(file)}
                 alt={`Preview ${index + 1}`}
                 className="w-full h-24 object-cover rounded-md"
+                width={200}
+                height={200}
               />
             </div>
           ))}

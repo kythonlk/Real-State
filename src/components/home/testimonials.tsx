@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Testimonials() {
   return (
@@ -35,10 +36,12 @@ export default function Testimonials() {
               </div>
               <p className="text-gray-600 mb-4">{testimonial.text}</p>
               <div className="flex items-center gap-3">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover"
+                  width={100}
+                  height={100}
                 />
                 <div>
                   <h4 className="font-semibold">{testimonial.name}</h4>
