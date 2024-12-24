@@ -17,8 +17,8 @@ export default function ListingGallery({ images }: ListingGalleryProps) {
         src={images[activeIndex]}
         alt="Property"
         className="w-full h-[500px] object-cover"
-        width={200}
-        height={200}
+        width={1000}
+        height={500}
       />
 
       {images.length > 1 && (

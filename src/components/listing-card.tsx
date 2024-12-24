@@ -31,8 +31,8 @@ export default function ListingCard({ listing }: ListingCardProps) {
         src={listing.imageUrl}
         alt={listing.title}
         className="w-full h-48 object-cover"
-        width={200}
-        height={200}
+        width={500}
+        height={500}
       />
       <div className="p-4">
         <div className="flex justify-between items-start">

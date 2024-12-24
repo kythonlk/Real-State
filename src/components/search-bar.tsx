@@ -40,7 +40,6 @@ export default function SearchBar() {
         </div>
         <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 flex items-center gap-2">
           <Search className="h-5 w-5" />
-          <span>Search</span>
         </button>
       </div>
 

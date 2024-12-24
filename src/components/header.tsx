@@ -15,7 +15,7 @@ export default function Header() {
           </div>
           <nav className="hidden md:flex space-x-6 text-gray-900">
             <Link href="/listings" className="text-gray-800 hover:text-blue-600">Properties</Link>
-            <Link href="/about-us" className="text-gray-800 hover:text-blue-600">About Us</Link>
+            <Link href="/about-us" className="text-gray-800 hover:text-blue-600">About</Link>
             <Link href="/contact" className="text-gray-800 hover:text-blue-600">Contact</Link>
             <Link href="/create-new" className="text-gray-800 hover:text-blue-600">Create Property</Link>
           </nav>

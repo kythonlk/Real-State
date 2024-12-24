@@ -38,7 +38,6 @@ export default function ImageUpload({ images, onImagesChange }: ImageUploadProps
                 src={URL.createObjectURL(file)}
                 alt={`Preview ${index + 1}`}
                 className="w-full h-24 object-cover rounded-md"
-                width={200}
                 height={200}
               />
             </div>
