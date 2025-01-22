@@ -14,6 +14,10 @@ export interface Listing {
   featured: boolean;
   propertyType: 'house' | 'condo' | 'apartment' | 'villa';
   mapLink: string;
+  location: {
+    lat: number;
+    lng: number;
+  };
 }
 
 

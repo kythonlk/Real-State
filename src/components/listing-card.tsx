@@ -10,6 +10,7 @@ interface ListingCardProps {
 }
 
 export default function ListingCard({ listing }: ListingCardProps) {
+  console.log(listing);
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'AED',
@@ -27,13 +28,18 @@ export default function ListingCard({ listing }: ListingCardProps) {
       onClick={handleClick}
       className="block bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
     >
-      <Image
-        src={listing.imageUrl}
-        alt={listing.title}
-        className="w-full h-48 object-cover"
-        width={500}
-        height={500}
-      />
+      <div className="relative">
+        <div className="absolute top-2 left-2 z-10">
+          <div className="bg-red-600 px-2 py-1 text-white rounded-md text-sm">For rent</div>
+        </div>
+        <Image
+          src={listing.imageUrl || "/placeholder.svg"}
+          alt={listing.title}
+          className="w-full h-48 object-cover"
+          width={500}
+          height={500}
+        />
+      </div>
       <div className="p-4">
         <div className="flex justify-between items-start">
           <h3 className="text-lg font-semibold text-gray-800">{listing.title}</h3>

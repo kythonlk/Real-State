@@ -19,6 +19,10 @@ export const listings: Listing[] = [
     featured: true,
     propertyType: 'villa',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14400.143792805154!2d55.14721637089845!3d25.124479100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f152e74224323%3A0x16e6d1196df7ebf9!2sPalm%20Jumeirah%2C%20Dubai!5e0!3m2!1sen!2sae!4v1707484894057!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '2',
@@ -36,6 +40,10 @@ export const listings: Listing[] = [
     featured: true,
     propertyType: 'apartment',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14401.64017500576!2d55.27077122047034!3d25.204776399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0x7f149b56c8ae664f!2sDowntown%20Dubai%2C%20Dubai!5e0!3m2!1sen!2sae!4v1707484925194!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '3',
@@ -53,6 +61,10 @@ export const listings: Listing[] = [
     featured: false,
     propertyType: 'villa',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14403.20738606127!2d55.30937307733885!3d25.061041499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6c6a37d52243%3A0x8bf7641eb39ab3f8!2sArabian%20Ranches%2C%20Dubai!5e0!3m2!1sen!2sae!4v1707484973204!5m2!1sen!2sae',
+    location: {
+      lat: 24.474004,
+      lng: 54.376670
+    },
   },
   {
     id: '4',
@@ -70,6 +82,10 @@ export const listings: Listing[] = [
     featured: true,
     propertyType: 'apartment',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14461.609174639609!2d54.36535094999998!3d24.484178799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e429a84b53561%3A0x51c66360df4eb8a!2sAbu%20Dhabi%20Corniche%2C%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1707485019239!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '5',
@@ -87,6 +103,10 @@ export const listings: Listing[] = [
     featured: false,
     propertyType: 'house',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14402.262355573432!2d55.215915058424134!3d25.087901849999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6e5bf1324f29%3A0x9e9491162f95c1c5!2sAl%20Barsha%2C%20Dubai!5e0!3m2!1sen!2sae!4v1707485082597!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '6',
@@ -104,6 +124,10 @@ export const listings: Listing[] = [
     featured: true,
     propertyType: 'condo',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14402.487843991248!2d55.18979228922124!3d25.081534200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6a1f7a674e7b%3A0xd3b34e4c3c3f6995!2sDubai%20Marina%2C%20Dubai!5e0!3m2!1sen!2sae!4v1707485119630!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '7',
@@ -121,6 +145,10 @@ export const listings: Listing[] = [
     featured: false,
     propertyType: 'apartment',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14401.533257388025!2d55.28491551810056!3d25.188486218052973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43357b99462b%3A0x4dd36082f2e14142!2sBusiness%20Bay%2C%20Dubai!5e0!3m2!1sen!2sae!4v1707485170157!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '8',
@@ -138,6 +166,10 @@ export const listings: Listing[] = [
     featured: false,
     propertyType: 'house',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14485.264189888553!2d55.74585661699572!3d24.219686200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab1662280bb7f%3A0x136902f831df4c27!2sAl%20Ain%2C%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1707485240479!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '9',
@@ -155,6 +187,10 @@ export const listings: Listing[] = [
     featured: true,
     propertyType: 'villa',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14340.29427961782!2d55.95473279641113!3d25.789877500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef64121170d4953%3A0xc51c8021e891e0c9!2sRas%20Al%20Khaimah%2C%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1707485303265!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   },
   {
     id: '10',
@@ -172,6 +208,10 @@ export const listings: Listing[] = [
     featured: false,
     propertyType: 'apartment',
     mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14401.096231055123!2d55.39241304999999!3d25.355426700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5c57403192031b%3A0x330c7c9b74c27980!2sSharjah%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1707485366081!5m2!1sen!2sae',
+    location: {
+      lat: 52.2297,
+      lng: 21.0122
+    },
   }
 ];
 
