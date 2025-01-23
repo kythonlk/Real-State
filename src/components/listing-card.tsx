@@ -10,22 +10,15 @@ interface ListingCardProps {
 }
 
 export default function ListingCard({ listing }: ListingCardProps) {
-  console.log(listing);
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'AED',
     maximumFractionDigits: 0,
   });
 
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.location.href = `/listings/${listing.id}`;
-  };
-
   return (
     <a
       href={`/listings/${listing.id}`}
-      onClick={handleClick}
       className="block bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
     >
       <div className="relative">

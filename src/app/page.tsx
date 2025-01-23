@@ -1,5 +1,7 @@
+"use client";
+
 import dynamic from 'next/dynamic'
-import Map from '../components/map-listings'
+const Map = dynamic(() => import('../components/map-listings'), { ssr: false })
 import Hero from '../components/hero';
 import FeaturedListings from '../components/featured-listings';
 import Stats from '../components/home/stats';
